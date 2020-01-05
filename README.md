@@ -72,4 +72,3 @@
     <pre>yarn && npx react-native run-android</pre>
 
   <p>Segue em anexo um arquivo .json para ser importado no Postman com as requisiçoes testes para API.</p>
-# gympoint
