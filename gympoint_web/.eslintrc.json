@@ -1,0 +1,56 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": ["airbnb", "prettier", "prettier/react"],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier", "import-helpers"],
+  "rules": {
+    "global-require": "off",
+    "prettier/prettier": "error",
+    "camelcase": "off",
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "import/prefer-default-export": "off",
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "/^react/",
+          "module",
+          "/^~/",
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ],
+    "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "react/jsx-one-expression-per-line": "off",
+    "no-shadow": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "react-hooks/exhaustive-deps": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "babel-plugin-root-import": {
+        "rootPathSuffix": "src"
+      }
+    }
+  }
+}
